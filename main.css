@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+    text-decoration: none;
+}
+body {
+    background: #010101;
+}
+.tabpanel {
+    width: 100%;
+    height: 100vh;
+    background: #232323;
+    position: relative;
+}
+.tabpanel__links {
+    position: absolute;
+    display: flex;
+    background: #494949;
+    z-index: 10;
+}
+.tabpanel__links a {
+    padding: 15px 20px;
+    font-size: 20px;
+    color: #ffffff;
+    border-bottom: 4px solid transparent;
+}
+.tabpanel__links a.active {
+    border-bottom-color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+.tabpanel__content {
+    width: 100%;
+    height: 100%;
+    background: #898989;
+    position: relative;
+}
+.tabpanel__item {
+    width: 100%;
+    height: 100%;
+    background: #232323;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    opacity: 0;
+    z-index: -1;
+}
+.tabpanel__item.active {
+    opacity: 1;
+    z-index: 1;
+}
+/* arrowclock */
+.arrowclock {
+    width: 350px;
+    height: 350px;
+    background: #464646;
+    border-radius: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.arrowclock-number {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px 0 #ffffff, inset 0 0 15px 0 #232323;
+    border-radius: 300px;
+}
+.arrowclock-number__num {
+    font-size: 20px;
+    position: absolute;
+}
+.num12 {top: 15px;}
+.num9 {left: 15px;}
+.num3 {right: 15px;}
+.num6 {bottom: 15px;}
+
+.arrowclock-number__arr {
+    width: 10px;
+    height: 100%;
+    /* background: black; */
+    position: absolute;
+}
+.arrowclock-number__arr::before,
+.arrowclock-number__arr::after {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 #ffffff;
+    background: #ffffff;
+    position: absolute;
+    content: '';
+}
+.arrowclock-number__arr::before {top: 15px;}
+.arrowclock-number__arr::after {bottom: 15px;}
+
+.num1-7 {transform: rotate(30deg);}
+.num2-8 {transform: rotate(60deg);}
+.num4-10 {transform: rotate(120deg);}
+.num5-11 {transform: rotate(150deg);}
+
+.arrS {
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrS::before {
+    width: 100%;
+    height: 45%;
+    background: red;
+    border-radius: 200% 200% 0 0;
+    content: '';
+    position: absolute;
+    top: 15px;
+}
+.arrS::after {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 30px;
+    content: '';
+    position: absolute;
+}
+.arrM, .arrH {
+    width: 8px;
+    height: 100%;
+    position: absolute;
+}
+/* .arrM {transform: rotate(30deg);} 
+.arrH {transform: rotate(60deg);} */
+
+.arrM::before,
+.arrH::before {
+    width: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    position: absolute;
+    content: '';
+    background: gray;
+    border-radius: 10px;
+}
+.arrH::before {height: 30%; top: 70px;}
+.arrM::before {height: 35%; top: 55px;}
+
+.numberclock {
+    display: flex;
+    gap: 40px;
+    margin-top: 70px;
+}
+.numberclock__num {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: relative;
+}
+.numberclock__num svg {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    transform: rotate(-90deg);
+}
+.numberclock__num circle {
+    stroke: #646464;
+    stroke-width: 5px;
+    transform: translate(5px, 5px);
+}
+.numberclock__num circle:last-of-type {
+    stroke: #ffffff;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.dotH {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.dotH::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 8px;
+    background: #ffffff;
+    position: absolute;
+    content: '';
+}
+.numberclock__num--text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    font-size: 35px;
+}
+
+
